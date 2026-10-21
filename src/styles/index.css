@@ -257,3 +257,25 @@ h3 {
   clip: rect(0 0 0 0);
   white-space: nowrap;
 }
+
+/* большие мониторы: масштабируем весь интерфейс, чтобы текст не казался мелким */
+@media (min-width: 1600px) {
+  html {
+    zoom: 1.2;
+  }
+}
+@media (min-width: 1920px) {
+  html {
+    zoom: 1.4;
+  }
+}
+@media (min-width: 2400px) {
+  html {
+    zoom: 1.8;
+  }
+}
+@media (min-width: 3200px) {
+  html {
+    zoom: 2.4;
+  }
+}
