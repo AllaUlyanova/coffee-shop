@@ -1,6 +1,6 @@
 // Пути к фотографиям. Файлы кладите в public/images/ с этими именами.
 // Если файла нет, сайт покажет заглушку в цветах бренда.
-export const images = {
+const raw = {
   logo: '/images/logo.svg',
   hero: '/images/hero.jpg',
   about: ['/images/about-1.jpg', '/images/about-2.jpg'],
@@ -33,3 +33,12 @@ export const images = {
     'cinnamon-roll': '/images/menu/cinnamon-roll.jpg',
   } as Record<string, string>,
 }
+
+// Пути работают и на корне домена, и в подпапке (GitHub Pages): добавляем base.
+const withBase = <T,>(v: T): T => {
+  if (typeof v === 'string') return (import.meta.env.BASE_URL + v.replace(/^\//, '')) as T
+  if (Array.isArray(v)) return v.map(withBase) as T
+  if (v && typeof v === 'object') return Object.fromEntries(Object.entries(v).map(([k, x]) => [k, withBase(x)])) as T
+  return v
+}
+export const images: typeof raw = withBase(raw)
