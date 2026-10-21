@@ -1,0 +1,36 @@
+{
+  "name": "coffee-shop",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@fontsource-variable/caveat": "^5.3.0",
+    "@fontsource-variable/literata": "^5.3.0",
+    "@fontsource-variable/manrope": "^5.3.0",
+    "framer-motion": "^14.5.0",
+    "gsap": "^3.15.0",
+    "html-to-image": "^1.11.13",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.31",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.21"
+  },
+  "private": true
+}
